@@ -47,6 +47,10 @@ namespace TicketBookingSystem.BusinessLayer
             eventObj.AvailableSeats += numTickets;
             Console.WriteLine($"{numTickets} Tickets cancelled. Updated available tickets are: {eventObj.AvailableSeats}"); 
         }
+
+        public string GetEventDetails(Event eventObj) {
+            return $"Event Name: {eventObj.EventName}\nEvent Date: {eventObj.EventDate}\nEvent Time: {eventObj.EventTime}\nVenue Name: {eventObj.VenueName}\nTotal number of Seats: {eventObj.TotalSeats}\nAvailable Seats: {eventObj.AvailableSeats}\nPrice of Ticket: {eventObj.TicketPrice}\nType of the Event: {eventObj.eventType}";
+        }
     }
 
 }

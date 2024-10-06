@@ -33,6 +33,7 @@ namespace TicketBookingSystem.task1_2_3
         }
         static void Main(string[] args)
         {
+            Console.WriteLine("\n-------------------THIS IS TASK 1 AND TASK 2 AND TASK 3-------------------\n");
             //task 1 Conditional statement
             Console.WriteLine("----------TASK 1 CONDITIONAL STATEMENT----------");
             int availableTickets = 100;

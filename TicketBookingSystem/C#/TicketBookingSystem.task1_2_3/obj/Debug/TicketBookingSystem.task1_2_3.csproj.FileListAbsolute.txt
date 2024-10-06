@@ -5,3 +5,10 @@ C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystemApp\obj\Debug\
 C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystemApp\obj\Debug\TicketBookingSystem.task1_2_3.csproj.CoreCompileInputs.cache
 C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystemApp\obj\Debug\TicketBookingSystemApp.exe
 C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystemApp\obj\Debug\TicketBookingSystemApp.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\bin\Debug\TicketBookingSystemApp.exe.config
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\bin\Debug\TicketBookingSystemApp.exe
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\bin\Debug\TicketBookingSystemApp.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\obj\Debug\TicketBookingSystem.task1_2_3.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\obj\Debug\TicketBookingSystem.task1_2_3.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\obj\Debug\TicketBookingSystemApp.exe
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.task1_2_3\obj\Debug\TicketBookingSystemApp.pdb

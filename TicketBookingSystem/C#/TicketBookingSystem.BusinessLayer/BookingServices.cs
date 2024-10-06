@@ -40,13 +40,11 @@ namespace TicketBookingSystem.BusinessLayer
             }
 
             eventServices.CancelBooking(booking.Event, numTickets);
-
-            Console.WriteLine($"{numTickets} tickets cancelled. Updated available tickets are: {booking.Event.AvailableSeats}");
         }
 
 
 
-        private decimal CalculateBookingCost(decimal ticketPrice, int numTickets)
+        public decimal CalculateBookingCost(decimal ticketPrice, int numTickets)
         {
             return ticketPrice * numTickets;
         }

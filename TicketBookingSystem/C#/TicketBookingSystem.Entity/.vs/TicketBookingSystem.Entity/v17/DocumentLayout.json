@@ -1,9 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystem.Entity\\",
+  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\C#\\TicketBookingSystem.Entity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{656CED91-A52F-472E-A18A-9A672F831766}|..\\TicketBookingSystemApp\\TicketBookingSystemApp.csproj|c:\\users\\vinay\\hexaware\\ticketbookingsystem\\c#\\ticketbookingsystemapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystemApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystem.task1_2_3\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +16,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystem.task1_2_3\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\TicketBookingSystem\\C#\\TicketBookingSystem.task1_2_3\\Program.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystem.task1_2_3\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\TicketBookingSystem\\C#\\TicketBookingSystem.task1_2_3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-04T12:03:29.774Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystemApp\\Program.cs",
-              "RelativeDocumentMoniker": "..\\TicketBookingSystemApp\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\TicketBookingSystem\\C#\\TicketBookingSystemApp\\Program.cs",
               "ToolTip": "C:\\Users\\vinay\\Hexaware\\TicketBookingSystem\\C#\\TicketBookingSystemApp\\Program.cs",
-              "RelativeToolTip": "..\\TicketBookingSystemApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
+              "RelativeToolTip": "..\\..\\..\\..\\TicketBookingSystem\\C#\\TicketBookingSystemApp\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T08:17:20.064Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-04T08:17:20.064Z"
             }
           ]
         }

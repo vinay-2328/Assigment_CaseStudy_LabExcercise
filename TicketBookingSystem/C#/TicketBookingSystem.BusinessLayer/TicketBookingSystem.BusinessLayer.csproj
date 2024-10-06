@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="BookingServices.cs" />
     <Compile Include="CustomerServices.cs" />
+    <Compile Include="Sub Classes\Concert.cs" />
+    <Compile Include="Sub Classes\Movie.cs" />
+    <Compile Include="Sub Classes\Sports.cs" />
     <Compile Include="VenueServices.cs" />
     <Compile Include="EventServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,5 +56,6 @@
       <Name>TicketBookingSystem.Entity</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

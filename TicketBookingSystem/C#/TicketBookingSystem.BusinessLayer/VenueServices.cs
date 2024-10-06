@@ -21,7 +21,7 @@ namespace TicketBookingSystem.BusinessLayer
 
         public void DisplayVenueDetails(Venue venue)
         {
-            Console.WriteLine($"Venue: {venue.VenueName} Address: {venue.Address}");
+            Console.WriteLine($"Venue: {venue.VenueName}\nAddress: {venue.Address}");
         }
     }
 }
