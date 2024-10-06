@@ -23,7 +23,7 @@ namespace TicketBookingSystem.BusinessLayer.SubClass
             TotalSeats = totalSeats;
             AvailableSeats = availableSeats;
             TicketPrice = ticketPrice;
-            eventType = EventType.Movie;
+            eventType = EventType.Sports;
 
             SportName = sportName;
             Teams = teams;
