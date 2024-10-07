@@ -1,0 +1,27 @@
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBo.DA6B1B29.Up2Date
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBo.DA6B1B29.Up2Date
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\C#\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBo.DA6B1B29.Up2Date
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 1 2 3\TicketBookingSystem.BusinessLayer\obj\Debug\TicketBookingSystem.BusinessLayer.pdb
