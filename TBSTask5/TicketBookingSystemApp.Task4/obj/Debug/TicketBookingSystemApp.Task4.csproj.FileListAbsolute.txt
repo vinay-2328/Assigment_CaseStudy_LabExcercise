@@ -1,0 +1,7 @@
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\bin\Debug\TicketBookingSystemApp.Task4.exe.config
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\bin\Debug\TicketBookingSystemApp.Task4.exe
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\bin\Debug\TicketBookingSystemApp.Task4.pdb
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\obj\Debug\TicketBookingSystemApp.Task4.csproj.AssemblyReference.cache
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\obj\Debug\TicketBookingSystemApp.Task4.csproj.CoreCompileInputs.cache
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\obj\Debug\TicketBookingSystemApp.Task4.exe
+C:\Users\vinay\TBS\TicketBookingSystemApp.Task4\obj\Debug\TicketBookingSystemApp.Task4.pdb
