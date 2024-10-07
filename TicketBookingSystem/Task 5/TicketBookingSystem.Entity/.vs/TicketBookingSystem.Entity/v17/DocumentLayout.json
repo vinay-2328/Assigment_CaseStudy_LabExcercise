@@ -1,12 +1,36 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 4 5\\TicketBookingSystem.Entity\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 5\\TicketBookingSystem.Entity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95E20DE2-4785-432A-9E76-AE5110E5131C}|..\\TicketBookingSystemApp.Task5\\TicketBookingSystemApp.Task5.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 5\\ticketbookingsystemapp.task5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 5\\TicketBookingSystemApp.Task5\\Program.cs",
+              "RelativeDocumentMoniker": "..\\TicketBookingSystemApp.Task5\\Program.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 5\\TicketBookingSystemApp.Task5\\Program.cs",
+              "RelativeToolTip": "..\\TicketBookingSystemApp.Task5\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T10:21:47.094Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

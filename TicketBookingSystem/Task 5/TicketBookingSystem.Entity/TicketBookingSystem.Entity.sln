@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingSystem.Entity"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingSystem.BusinessLayer", "..\TicketBookingSystem.BusinessLayer\TicketBookingSystem.BusinessLayer.csproj", "{8E24C03C-FB61-4F34-B1D0-17FD7A066FED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingSystemApp.Task5", "..\TicketBookingSystemApp.Task4\TicketBookingSystemApp.Task5.csproj", "{95E20DE2-4785-432A-9E76-AE5110E5131C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicketBookingSystemApp.Task5", "..\TicketBookingSystemApp.Task5\TicketBookingSystemApp.Task5.csproj", "{95E20DE2-4785-432A-9E76-AE5110E5131C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
