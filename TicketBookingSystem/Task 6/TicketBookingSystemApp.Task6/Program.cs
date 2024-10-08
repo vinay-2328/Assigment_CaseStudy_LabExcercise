@@ -13,7 +13,6 @@ namespace TicketBookingSystemApp.Task6
 
         static void Main(string[] args)
         {
-            EventRepository eventRepository = new EventRepository();
             EventServices eventServices = new EventServices();
             TicketBookingSystemServices tbsServices = new TicketBookingSystemServices();
 
