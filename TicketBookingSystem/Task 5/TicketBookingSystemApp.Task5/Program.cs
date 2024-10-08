@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TicketBookingSystem.BusinessLayer;
 using TicketBookingSystem.BusinessLayer.Repository;
+using TicketBookingSystem.BusinessLayer.Services;
 using TicketBookingSystem.Entity;
 
 namespace TicketBookingSystemApp.Task5
@@ -14,7 +15,7 @@ namespace TicketBookingSystemApp.Task5
         {
             EventRepository eventRepository = new EventRepository();
             EventServices eventServices = new EventServices();
-            TicketBookingSystemRepository tbsRepository = new TicketBookingSystemRepository();
+            TicketBookingSystemServices tbsServices = new TicketBookingSystemServices();
 
             Console.WriteLine("**********Welcome to the Ticket Booking System!**********");
 
@@ -126,7 +127,7 @@ namespace TicketBookingSystemApp.Task5
                         }
 
                         // Create the event and adding it to the list
-                        Event createdEvent = tbsRepository.createEvent(name, eventDate, eventTime, venueName, totalSeats, availableSeats, ticketPrice, eventType,additionalInfo);
+                        Event createdEvent = tbsServices.createEvent(name, eventDate, eventTime, venueName, totalSeats, availableSeats, ticketPrice, eventType,additionalInfo);
                         // Storing the created event
                         events.Add(createdEvent);
                         Console.WriteLine("Event created successfully.");
@@ -140,7 +141,7 @@ namespace TicketBookingSystemApp.Task5
 
                         if (eventToDisplay != null)
                         {
-                            tbsRepository.DisplayEventDetails(eventToDisplay);
+                            tbsServices.DisplayEventDetails(eventToDisplay);
                         }
                         else
                         {
