@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.businesslayer\\repository\\taxrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|solutionrelative:payxpert.businesslayer\\repository\\taxrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B950AFC9-390D-4226-807C-BAEFA59E8CAC}|PayXpertApp.MainModule\\PayXpertApp.MainModule.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpertapp.mainmodule\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B950AFC9-390D-4226-807C-BAEFA59E8CAC}|PayXpertApp.MainModule\\PayXpertApp.MainModule.csproj|solutionrelative:payxpertapp.mainmodule\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.businesslayer\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|solutionrelative:payxpert.businesslayer\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.businesslayer\\repository\\payrollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|solutionrelative:payxpert.businesslayer\\repository\\payrollrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9013EE7A-CBEA-4E86-947C-E94B902A26FE}|PayXpert.Entity\\PayXpert.Entity.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.entity\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9013EE7A-CBEA-4E86-947C-E94B902A26FE}|PayXpert.Entity\\PayXpert.Entity.csproj|solutionrelative:payxpert.entity\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.businesslayer\\repository\\financialrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|solutionrelative:payxpert.businesslayer\\repository\\financialrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D882F33-42F2-4E11-B4EF-BBAFCD7BE502}|PayXpert.Util\\PayXpert.Util.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.util\\dbconnutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6D882F33-42F2-4E11-B4EF-BBAFCD7BE502}|PayXpert.Util\\PayXpert.Util.csproj|solutionrelative:payxpert.util\\dbconnutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\invalidinputexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\invalidinputexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\databaseconnectionexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\financialrecordexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\financialrecordexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\taxcalculationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\taxcalculationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\payrollgenerationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\payrollgenerationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.exception\\employeenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFEA34FA-B953-455C-B4A9-78D3B19997B3}|PayXpert.Exception\\PayXpert.Exception.csproj|solutionrelative:payxpert.exception\\employeenotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\case study\\payxpertsolution\\payxpert.businesslayer\\services\\financialrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD2FC38A-F419-4866-A46B-669E5EC00B9E}|PayXpert.BusinessLayer\\PayXpert.BusinessLayer.csproj|solutionrelative:payxpert.businesslayer\\services\\financialrecordservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FinancialRecordRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\FinancialRecordRepository.cs",
+              "RelativeDocumentMoniker": "PayXpert.BusinessLayer\\Repository\\FinancialRecordRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\FinancialRecordRepository.cs",
+              "RelativeToolTip": "PayXpert.BusinessLayer\\Repository\\FinancialRecordRepository.cs",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:30:20.554Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpertApp.MainModule\\Program.cs",
+              "RelativeDocumentMoniker": "PayXpertApp.MainModule\\Program.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpertApp.MainModule\\Program.cs",
+              "RelativeToolTip": "PayXpertApp.MainModule\\Program.cs",
+              "ViewState": "AgIAAOoAAAAAAAAAAAAAADcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T12:23:20.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "PayXpert.BusinessLayer\\Repository\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\EmployeeRepository.cs",
+              "RelativeToolTip": "PayXpert.BusinessLayer\\Repository\\EmployeeRepository.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAwwHoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:59:00.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DBConnUtil.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Util\\DBConnUtil.cs",
+              "RelativeDocumentMoniker": "PayXpert.Util\\DBConnUtil.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Util\\DBConnUtil.cs",
+              "RelativeToolTip": "PayXpert.Util\\DBConnUtil.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:14:39.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TaxRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\TaxRepository.cs",
+              "RelativeDocumentMoniker": "PayXpert.BusinessLayer\\Repository\\TaxRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\TaxRepository.cs",
+              "RelativeToolTip": "PayXpert.BusinessLayer\\Repository\\TaxRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:09:07.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PayrollRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\PayrollRepository.cs",
+              "RelativeDocumentMoniker": "PayXpert.BusinessLayer\\Repository\\PayrollRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Repository\\PayrollRepository.cs",
+              "RelativeToolTip": "PayXpert.BusinessLayer\\Repository\\PayrollRepository.cs",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAuwIcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:01:03.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Entity\\Employee.cs",
+              "RelativeDocumentMoniker": "PayXpert.Entity\\Employee.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Entity\\Employee.cs",
+              "RelativeToolTip": "PayXpert.Entity\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T15:25:39.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InvalidInputException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\InvalidInputException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\InvalidInputException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\InvalidInputException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\InvalidInputException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:56:07.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FinancialRecordException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\FinancialRecordException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\FinancialRecordException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\FinancialRecordException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\FinancialRecordException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:56.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DatabaseConnectionException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\DatabaseConnectionException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\DatabaseConnectionException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\DatabaseConnectionException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\DatabaseConnectionException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:50:54.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaxCalculationException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\TaxCalculationException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\TaxCalculationException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\TaxCalculationException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\TaxCalculationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:41.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PayrollGenerationException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\PayrollGenerationException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\PayrollGenerationException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\PayrollGenerationException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\PayrollGenerationException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:25.718Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EmployeeNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\EmployeeNotFoundException.cs",
+              "RelativeDocumentMoniker": "PayXpert.Exception\\EmployeeNotFoundException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.Exception\\EmployeeNotFoundException.cs",
+              "RelativeToolTip": "PayXpert.Exception\\EmployeeNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:55:07.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FinancialRecordService.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Services\\FinancialRecordService.cs",
+              "RelativeDocumentMoniker": "PayXpert.BusinessLayer\\Services\\FinancialRecordService.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\Case Study\\PayXpertSolution\\PayXpert.BusinessLayer\\Services\\FinancialRecordService.cs",
+              "RelativeToolTip": "PayXpert.BusinessLayer\\Services\\FinancialRecordService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T14:40:25.706Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

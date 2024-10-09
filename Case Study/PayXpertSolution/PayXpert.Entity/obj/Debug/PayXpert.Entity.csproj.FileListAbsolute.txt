@@ -1,0 +1,6 @@
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\bin\Debug\PayXpert.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\bin\Debug\PayXpert.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\obj\Debug\PayXpert.Entity.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\obj\Debug\PayXpert.Entity.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\obj\Debug\PayXpert.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.Entity\obj\Debug\PayXpert.Entity.pdb

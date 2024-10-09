@@ -1,0 +1,14 @@
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\obj\Debug\PayXpert.BusinessLayer.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\obj\Debug\PayXpert.BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\obj\Debug\PayXpert.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\obj\Debug\PayXpert.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\obj\Debug\PayXpert.EDD3D9FE.Up2Date
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.BusinessLayer.dll.config
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Util.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Util.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Exception.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\Case Study\PayXpertSolution\PayXpert.BusinessLayer\bin\Debug\PayXpert.Exception.pdb

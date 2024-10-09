@@ -5,20 +5,6 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 {
     public class EventRepository : IEventRepository
     {
-        //String eventName;
-        //DateTime eventDate;
-        //TimeSpan eventTime;
-        //String venueName;
-        //int totalSeats;
-        //int availableSeats;
-        //Decimal ticketPrice;
-        //EventType type;
-        //enum EventType
-        //{
-        //    Movie,
-        //    Sports,
-        //    Concert
-        //}
         public virtual void DisplayEventDetails(Event eventObj)
         {
             Console.WriteLine($"Event Name: {eventObj.EventName}\nEvent Date: {eventObj.EventDate}\nEvent Time: {eventObj.EventTime}\nVenue Name: {eventObj.VenueName}\nTotal number of Seats: {eventObj.TotalSeats}\nAvailable Seats: {eventObj.AvailableSeats}\nPrice of Ticket: {eventObj.TicketPrice}\nType of the Event: {eventObj.Type}");
