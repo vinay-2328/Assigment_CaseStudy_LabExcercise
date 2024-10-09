@@ -1,0 +1,12 @@
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 6\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Task 7\TicketBookingSystem.Entity\obj\Debug\TicketBookingSystem.Entity.pdb

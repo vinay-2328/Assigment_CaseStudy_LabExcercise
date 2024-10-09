@@ -7,30 +7,30 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 {
     public class TicketBookingSystemRepository : EventRepository, ITicketBookingSystemRepository
     {
-        public Event createEvent(String eventName,DateTime eventDate,TimeSpan eventTime,String venueName,int totalSeats,int availableSeats,Decimal ticketPrice,EventType type,params object[] additionalInfo)
+        public Event createEvent(String eventName, DateTime eventDate, TimeSpan eventTime, String venueName, int totalSeats, int availableSeats, Decimal ticketPrice, EventType type, params object[] additionalInfo)
         {
             Event eventObj;
 
-            switch (type.ToString().ToLower()) 
+            switch (type.ToString().ToLower())
             {
 
                 case "movie":
                     if (additionalInfo.Length < 3)
                         throw new Exception("Incomplete additional info");
-                    
-                    Movie movie = new Movie
-                    { 
-                        EventName = eventName,
-                        EventDate = eventDate,
-                        EventTime = eventTime,
-                        VenueName = venueName,
-                        TotalSeats = totalSeats,
-                        AvailableSeats = availableSeats,
-                        TicketPrice = ticketPrice,
-                        Type = EventType.Movie,
-                        Genre = Convert.ToString(additionalInfo[0]),
-                        Actor = Convert.ToString(additionalInfo[1]),
-                        Actress = Convert.ToString(additionalInfo[2]),
+
+                    Movie movie = new Movie();
+                    {
+                        movie.EventName = eventName;
+                        movie.EventDate = eventDate;
+                        movie.EventTime = eventTime;
+                        movie.Venue.VenueName = venueName;
+                        movie.TotalSeats = totalSeats;
+                        movie.AvailableSeats = availableSeats;
+                        movie.TicketPrice = ticketPrice;
+                        movie.Type = EventType.Movie;
+                        movie.Genre = Convert.ToString(additionalInfo[0]);
+                        movie.Actor = Convert.ToString(additionalInfo[1]);
+                        movie.Actress = Convert.ToString(additionalInfo[2]);
                     };
 
                     eventObj = movie;
@@ -41,14 +41,14 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                     concert.EventName = eventName;
                     concert.EventDate = eventDate;
                     concert.EventTime = eventTime;
-                    concert.VenueName = venueName;
+                    concert.Venue.VenueName = venueName;
                     concert.TotalSeats = totalSeats;
                     concert.AvailableSeats = availableSeats;
                     concert.TicketPrice = ticketPrice;
                     concert.Type = EventType.Concert;
                     concert.Artist = Convert.ToString(additionalInfo[0]);
-                    concert.ConcertType = Convert.ToString(additionalInfo[1]);  
-                    
+                    concert.ConcertType = Convert.ToString(additionalInfo[1]);
+
                     eventObj = concert;
                     break;
 
@@ -58,7 +58,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                     sports.EventName = eventName;
                     sports.EventDate = eventDate;
                     sports.EventTime = eventTime;
-                    sports.VenueName = venueName;
+                    sports.Venue.VenueName = venueName;
                     sports.TotalSeats = totalSeats;
                     sports.AvailableSeats = availableSeats;
                     sports.TicketPrice = ticketPrice;
@@ -90,7 +90,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                 sportsRepository.DisplayEventDetails(sports);
 
             }
-            else if (eventObj is Concert concert) 
+            else if (eventObj is Concert concert)
             {
                 ConcertRepository concertRepository = new ConcertRepository();
                 concertRepository.DisplayEventDetails(concert);
@@ -102,12 +102,12 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 
         }
 
-        public override void BookTickets(int numTickets,Event eventObj)
+        public override void BookTickets(int numTickets, Event eventObj)
         {
             base.BookTickets(numTickets, eventObj);
         }
 
-        public override void CancelTickets(int numTickets,Event eventObj)
+        public override void CancelTickets(int numTickets, Event eventObj)
         {
             base.CancelTickets(numTickets, eventObj);
         }

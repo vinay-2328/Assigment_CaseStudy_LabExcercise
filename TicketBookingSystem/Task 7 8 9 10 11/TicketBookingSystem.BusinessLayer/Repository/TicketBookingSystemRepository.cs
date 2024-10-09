@@ -5,7 +5,7 @@ using static TicketBookingSystem.Entity.Event;
 
 namespace TicketBookingSystem.BusinessLayer.Repository
 {
-    public class TicketBookingSystemRepository : EventRepository, ITicketBookingSystemRepository
+    public class TicketBookingSystemRepository : EventRepository,ITicketBookingSystemRepository
     {
         public Event createEvent(String eventName,DateTime eventDate,TimeSpan eventTime,String venueName,int totalSeats,int availableSeats,Decimal ticketPrice,EventType type,params object[] additionalInfo)
         {
