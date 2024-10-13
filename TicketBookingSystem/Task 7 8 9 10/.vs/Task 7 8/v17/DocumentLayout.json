@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B787E59-EB96-40AA-84EB-97C6A545A470}|TicketBookingSystem.Util\\TicketBookingSystem.Util.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.util\\getdbconn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B787E59-EB96-40AA-84EB-97C6A545A470}|TicketBookingSystem.Util\\TicketBookingSystem.Util.csproj|solutionrelative:ticketbookingsystem.util\\getdbconn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.exception\\nullpointerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|solutionrelative:ticketbookingsystem.exception\\nullpointerexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.exception\\invalidbookingidexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|solutionrelative:ticketbookingsystem.exception\\invalidbookingidexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.exception\\eventnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{85FF0DCE-E9A8-4736-80EE-E11334B831C7}|TicketBookingSystem.Exception\\TicketBookingSystem.Exception.csproj|solutionrelative:ticketbookingsystem.exception\\eventnotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E24C03C-FB61-4F34-B1D0-17FD7A066FED}|TicketBookingSystem.BusinessLayer\\TicketBookingSystem.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.businesslayer\\repository\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E24C03C-FB61-4F34-B1D0-17FD7A066FED}|TicketBookingSystem.BusinessLayer\\TicketBookingSystem.BusinessLayer.csproj|solutionrelative:ticketbookingsystem.businesslayer\\repository\\ibookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E24C03C-FB61-4F34-B1D0-17FD7A066FED}|TicketBookingSystem.BusinessLayer\\TicketBookingSystem.BusinessLayer.csproj|c:\\users\\vinay\\hexaware\\assigment_lab_excerise\\ticketbookingsystem\\task 7 8\\ticketbookingsystem.businesslayer\\repository\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E24C03C-FB61-4F34-B1D0-17FD7A066FED}|TicketBookingSystem.BusinessLayer\\TicketBookingSystem.BusinessLayer.csproj|solutionrelative:ticketbookingsystem.businesslayer\\repository\\bookingrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NullPointerException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\NullPointerException.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.Exception\\NullPointerException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\NullPointerException.cs",
+              "RelativeToolTip": "TicketBookingSystem.Exception\\NullPointerException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:49:06.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InvalidBookingIDException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\InvalidBookingIDException.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.Exception\\InvalidBookingIDException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\InvalidBookingIDException.cs",
+              "RelativeToolTip": "TicketBookingSystem.Exception\\InvalidBookingIDException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:48:46.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\EventNotFoundException.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.Exception\\EventNotFoundException.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Exception\\EventNotFoundException.cs",
+              "RelativeToolTip": "TicketBookingSystem.Exception\\EventNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:47:54.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetDBConn.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Util\\GetDBConn.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.Util\\GetDBConn.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.Util\\GetDBConn.cs",
+              "RelativeToolTip": "TicketBookingSystem.Util\\GetDBConn.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:47:07.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IBookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.BusinessLayer\\Repository\\IBookingRepository.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.BusinessLayer\\Repository\\IBookingRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.BusinessLayer\\Repository\\IBookingRepository.cs",
+              "RelativeToolTip": "TicketBookingSystem.BusinessLayer\\Repository\\IBookingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:45:53.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingRepository.cs",
+              "DocumentMoniker": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.BusinessLayer\\Repository\\BookingRepository.cs",
+              "RelativeDocumentMoniker": "TicketBookingSystem.BusinessLayer\\Repository\\BookingRepository.cs",
+              "ToolTip": "C:\\Users\\vinay\\Hexaware\\Assigment_Lab_Excerise\\TicketBookingSystem\\Task 7 8\\TicketBookingSystem.BusinessLayer\\Repository\\BookingRepository.cs",
+              "RelativeToolTip": "TicketBookingSystem.BusinessLayer\\Repository\\BookingRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-09T17:45:49.738Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

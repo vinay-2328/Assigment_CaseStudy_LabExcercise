@@ -1,0 +1,16 @@
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\obj\Debug\TicketBookingSystemApp.Task11.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\obj\Debug\TicketBookingSystemApp.Task11.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\obj\Debug\TicketBookingSystemApp.Task6.exe
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\obj\Debug\TicketBookingSystemApp.Task6.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystemApp.Task6.exe.config
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystemApp.Task6.exe
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystemApp.Task6.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.BusinessLayer.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Entity.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Exception.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Util.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.BusinessLayer.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Entity.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Exception.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\bin\Debug\TicketBookingSystem.Util.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystemApp.Task11\obj\Debug\TicketBo.9B2106FC.Up2Date

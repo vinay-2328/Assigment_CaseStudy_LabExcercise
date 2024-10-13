@@ -1,0 +1,6 @@
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\bin\Debug\TicketBookingSystem.Util.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\bin\Debug\TicketBookingSystem.Util.pdb
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\obj\Debug\TicketBookingSystem.Util.csproj.AssemblyReference.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\obj\Debug\TicketBookingSystem.Util.csproj.CoreCompileInputs.cache
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\obj\Debug\TicketBookingSystem.Util.dll
+C:\Users\vinay\Hexaware\Assigment_Lab_Excerise\TicketBookingSystem\Final Project\TicketBookingSystem.Util\obj\Debug\TicketBookingSystem.Util.pdb
