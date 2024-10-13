@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 namespace PayXpert.BusinessLayer.Services
 {
-    internal interface IPayrollService
+    public interface IPayrollService
     {
         Payroll GetPayrollById(int payrollId);
         IEnumerable<Payroll> GetPayrollsForEmployee(int employeeId);

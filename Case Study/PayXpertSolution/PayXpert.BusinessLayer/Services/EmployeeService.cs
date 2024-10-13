@@ -28,9 +28,9 @@ namespace PayXpert.BusinessLayer.Services
         { 
             employeeRepository.RemoveEmployee(employeeId);
         }
-        public void UpdateEmployee(Employee employee)
+        public void UpdateEmployee(Employee employee, int employeeID)
         {
-            employeeRepository.UpdateEmployee(employee);
+            employeeRepository.UpdateEmployee(employee,employeeID);
         }
     }
 

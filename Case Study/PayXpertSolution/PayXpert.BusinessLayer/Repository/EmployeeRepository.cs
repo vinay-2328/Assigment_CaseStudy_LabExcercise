@@ -12,49 +12,60 @@ using PayXpert.Exception;
 namespace PayXpert.BusinessLayer.Repository
 {
     internal class EmployeeRepository : IEmployeeRepository
-    {  
-        public Employee GetEmployeeById(int employeeId) 
+    {
+        public Employee GetEmployeeById(int employeeId)
         {
             Employee employee = null;
-            
-            using(SqlConnection conn = DBConnUtil.GetConnection()){
 
-                string query = "select * from Employee where EmployeeID = @EmployeeID";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@EmployeeID", employeeId);
-
-                using(SqlDataReader reader = command.ExecuteReader())
+            try
+            {
+                using (SqlConnection conn = DBConnUtil.GetConnection())
                 {
-                    if (reader.Read())
-                    {
-                        employee = new Employee
-                        {
-                            EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
-                            FirstName = reader["FirstName"].ToString(),
-                            LastName = reader["LastName"].ToString(),
-                            DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
-                            Gender = Convert.ToChar(reader["Gender"]),
-                            Email = reader["Email"].ToString(),
-                            PhoneNumber = reader["PhoneNumber"].ToString(),
-                            Address = reader["Address"].ToString(),
-                            Position = reader["Position"].ToString(),
-                            JoiningDate = Convert.ToDateTime(reader["JoiningDate"].ToString()),
-                            TerminationDate = reader["TerminationDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["TerminationDate"])
+                    string query = "SELECT * FROM Employee WHERE EmployeeID = @EmployeeID";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@EmployeeID", employeeId);
 
-                        };
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            employee = new Employee
+                            {
+                                EmployeeID = Convert.ToInt32(reader["EmployeeID"]),
+                                FirstName = reader["FirstName"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                DateOfBirth = Convert.ToDateTime(reader["DateOfBirth"]),
+                                Gender = Convert.ToChar(reader["Gender"]),
+                                Email = reader["Email"].ToString(),
+                                PhoneNumber = reader["PhoneNumber"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                Position = reader["Position"].ToString(),
+                                JoiningDate = Convert.ToDateTime(reader["JoiningDate"].ToString()),
+                                TerminationDate = reader["TerminationDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(reader["TerminationDate"])
+                            };
+                        }
                     }
                 }
 
+                if (employee == null)
+                {
+                    throw new EmployeeNotFoundException($"Employee with ID {employeeId} not found.");
+                }
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine($"\n{ex.Message}");
+                ConsoleColorHelper.ResetColor();
+            }
+            catch (System.Exception ex)
+            {
+                Console.WriteLine($"Unexpected Error occur");   
             }
 
-            if(employee == null)
-            {
-                throw new EmployeeNotFoundException($"Employee with ID {employeeId} not found.");
-            }
-            
             return employee;
-            
         }
+
         public IEnumerable<Employee> GetAllEmployees() 
         {
             List<Employee> employees = new List<Employee>();
@@ -127,30 +138,41 @@ namespace PayXpert.BusinessLayer.Repository
         
         public void RemoveEmployee(int employeeId) 
         {
-            using (SqlConnection conn = DBConnUtil.GetConnection()) 
-            {
-                string query = "Delete from Employee where EmployeeID = @EmployeeID";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@EmployeeID", employeeId);
-
-                int rowAffected=command.ExecuteNonQuery();
-
-                if (rowAffected == 0) 
+            try{using (SqlConnection conn = DBConnUtil.GetConnection())
                 {
-                    throw new System.Exception("No record deleted");
+                    string query = "Delete from Employee where EmployeeID = @EmployeeID";
+                    SqlCommand command = new SqlCommand(query, conn);
+                    command.Parameters.AddWithValue("@EmployeeID", employeeId);
+
+                    int rowAffected = command.ExecuteNonQuery();
+
+                    if (rowAffected == 0)
+                    {
+                        ConsoleColorHelper.SetErrorColor();
+                        throw new EmployeeNotFoundException("Employee Not found");
+                        ConsoleColorHelper.ResetColor();
+                    }
+                    else
+                    {
+                        ConsoleColorHelper.SetSuccessColor();
+                        Console.WriteLine($"{rowAffected} rows deleted from Employee table with employeeid : {employeeId}");
+                        ConsoleColorHelper.ResetColor();
+                    };
                 }
-                else
-                {
-                    Console.WriteLine($"{rowAffected} rows deleted from Employee table with employeeid : {employeeId}");
-                };
+            }
+            catch (EmployeeNotFoundException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
 
         }
-        public void UpdateEmployee(Employee employee) 
+        public void UpdateEmployee(Employee employee,int employeeID) 
         {
             using (SqlConnection conn = DBConnUtil.GetConnection()) 
             {
-                string query = "UPDATE Employee SET FirstName = @FirstName, LastName = @LastName, DateOfBirth = @DateOfBirth, Gender = @Gender, " +
+                string query = "update Employee set FirstName = @FirstName, LastName = @LastName, DateOfBirth = @DateOfBirth, Gender = @Gender, " +
                                "Email = @Email, PhoneNumber = @PhoneNumber, Address = @Address, Position = @Position, JoiningDate = @JoiningDate, " +
                                "TerminationDate = @TerminationDate WHERE EmployeeID = @EmployeeID";
 
@@ -165,7 +187,7 @@ namespace PayXpert.BusinessLayer.Repository
                 command.Parameters.AddWithValue("@Position", employee.Position);
                 command.Parameters.AddWithValue("@JoiningDate", employee.JoiningDate);
                 command.Parameters.AddWithValue("@TerminationDate", employee.TerminationDate ?? (object)DBNull.Value);
-                command.Parameters.AddWithValue("@EmployeeID", employee.EmployeeID);
+                command.Parameters.AddWithValue("@EmployeeID", employeeID);
 
                 int rowAffected = command.ExecuteNonQuery();
 

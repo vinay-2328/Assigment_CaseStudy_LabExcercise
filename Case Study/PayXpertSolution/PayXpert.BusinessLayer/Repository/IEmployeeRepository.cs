@@ -13,6 +13,6 @@ namespace PayXpert.BusinessLayer.Repository
         IEnumerable<Employee> GetAllEmployees();
         void AddEmployee(Employee employee);
         void RemoveEmployee(int employeeId);
-        void UpdateEmployee(Employee employee);
+        void UpdateEmployee(Employee employee, int employeeID);
     }
 }

@@ -43,9 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubMenu\EmployeeMenu.cs" />
+    <Compile Include="SubMenu\FinancialMenu.cs" />
+    <Compile Include="SubMenu\PayrollMenu.cs" />
+    <Compile Include="SubMenu\TaxMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -62,6 +65,10 @@
     <ProjectReference Include="..\PayXpert.Exception\PayXpert.Exception.csproj">
       <Project>{bfea34fa-b953-455c-b4a9-78d3b19997b3}</Project>
       <Name>PayXpert.Exception</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PayXpert.Util\PayXpert.Util.csproj">
+      <Project>{6d882f33-42f2-4e11-b4ef-bbafcd7be502}</Project>
+      <Name>PayXpert.Util</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
