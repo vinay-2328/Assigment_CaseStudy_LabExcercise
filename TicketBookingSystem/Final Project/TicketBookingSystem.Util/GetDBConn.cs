@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,11 +13,19 @@ namespace TicketBookingSystem.Util
         public static SqlConnection GetConnection()
         {
 
-                string connectionString = "Data Source=DESKTOP-L8BCFL0\\SQLEXPRESS;Initial Catalog=TicketBookingSystem;Integrated Security=True";
+            try
+            {
+                string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
                 SqlConnection conn = new SqlConnection(connectionString);
                 conn.Open();
-
                 return conn;
+            }
+            catch (SqlException ex)
+            {
+                
+                Console.WriteLine($"SQL Exception: {ex.Message}");
+                throw; 
+            }
         }
 
     }

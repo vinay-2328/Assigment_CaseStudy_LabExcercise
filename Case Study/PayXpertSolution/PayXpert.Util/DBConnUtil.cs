@@ -1,7 +1,7 @@
 ﻿using PayXpert.Exception;
 using System;
 using System.Data.SqlClient;
-
+using System.Configuration;
 namespace PayXpert.Util
 {
     public static class DBConnUtil
@@ -10,7 +10,7 @@ namespace PayXpert.Util
         {
             try
             {
-            string connectionString= "Data Source=DESKTOP-L8BCFL0\\SQLEXPRESS;Initial Catalog=payXpert;Integrated Security=True";
+            string connectionString = ConfigurationManager.ConnectionStrings["MyDbConnection"].ConnectionString;
             SqlConnection conn =  new SqlConnection(connectionString);
             conn.Open();
 

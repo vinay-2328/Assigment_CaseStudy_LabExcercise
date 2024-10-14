@@ -102,6 +102,8 @@ namespace TicketBookingSystemApp
                 ConsoleColorHelper.SetErrorColor();
                 Console.WriteLine("Login failed. Please check your email and password.");
                 ConsoleColorHelper.ResetColor();
+                Console.WriteLine("\nPress enter to go back...");
+                Console.ReadKey();
                 
             }
         }
