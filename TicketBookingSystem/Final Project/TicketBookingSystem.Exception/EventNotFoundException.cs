@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TicketBookingSystem.Exception
 {
-    public class EventNotFoundException
+    public class EventNotFoundException : System.Exception
     {
+        public EventNotFoundException(int eventId)
+            : base($"Event with ID {eventId} was not found.")
+        {
+
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace TicketBookingSystem.Util
             {
                 
                 Console.WriteLine($"SQL Exception: {ex.Message}");
-                throw; 
+                throw;
             }
         }
 

@@ -28,9 +28,9 @@ namespace TicketBookingSystem.BusinessLayer
         {
             return eventRepository.GetEventDetailByEventType(eventType);
         }
-        public Event CreateEvent(string eventName, DateTime date, TimeSpan time, int totalSeats, decimal ticketPrice, string eventType, Venue venue)
+        public Event CreateEvent(Event eventObj)
         {
-            return eventRepository.CreateEvent(eventName,date,time,totalSeats,ticketPrice,eventType,venue);
+            return eventRepository.CreateEvent(eventObj);
         }
         public Event GetEventDetails(int eventID)
         {

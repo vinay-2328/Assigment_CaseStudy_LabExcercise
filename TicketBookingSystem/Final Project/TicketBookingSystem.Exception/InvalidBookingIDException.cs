@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TicketBookingSystem.Exception
 {
-    internal class InvalidBookingIDException
+    public class InvalidBookingIDException : System.Exception
     {
+        public InvalidBookingIDException(int bookingId)
+            : base($"Booking ID {bookingId} is invalid.")
+        {
+        }
     }
+
 }

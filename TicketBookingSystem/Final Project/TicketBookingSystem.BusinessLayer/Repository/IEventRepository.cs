@@ -8,7 +8,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
     public interface IEventRepository
     {
         IEnumerable<Event> GetAllEvents();
-        Event CreateEvent(string eventName, DateTime date, TimeSpan time, int totalSeats, decimal ticketPrice, string eventType, Venue venue);
+        Event CreateEvent(Event eventObj2);
         Event GetEventDetails(int eventID);
         IEnumerable<Event> GetEventDetailByEventType(EventType eventType);
         void BookTickets(int eventID, int numTickets);

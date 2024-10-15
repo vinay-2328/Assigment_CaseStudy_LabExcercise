@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using TicketBookingSystem.Entity;
+using TicketBookingSystem.Exception;
 using TicketBookingSystem.Util;
 using static TicketBookingSystem.Entity.Event;
 
@@ -10,82 +11,160 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 {
     public class EventRepository : IEventRepository
     {
-        
-        public Event CreateEvent(string eventName, DateTime date, TimeSpan time, int totalSeats, decimal ticketPrice, string eventType, Venue venue)
+
+        public Event CreateEvent(Event eventObj2)
         {
+
             Event eventObj = null;
 
-            using (SqlConnection conn = GetDBConn.GetConnection())
+            if (eventObj2 == null)
+                throw new NullPointerException();
+
+            try
             {
-                string query = @"insert into Event (EventName, EventDate, EventTime, VenueID, TotalSeats, AvailableSeats, TicketPrice, EventType) 
-                                 values (@EventName, @EventDate, @EventTime, @VenueID, @TotalSeats, @AvailableSeats, @TicketPrice, @EventType);
-                                 select SCOPE_IDENTITY();";
+                // Validate inputs
+                if (string.IsNullOrWhiteSpace(eventObj2.EventName) || eventObj2.Venue == null)
+                    throw new ArgumentException("Event name and venue cannot be null or empty.");
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@EventName", eventName);
-                cmd.Parameters.AddWithValue("@EventDate", date);
-                cmd.Parameters.AddWithValue("@EventTime", time);
-                cmd.Parameters.AddWithValue("@VenueID", venue.VenueID);
-                cmd.Parameters.AddWithValue("@TotalSeats", totalSeats);
-                cmd.Parameters.AddWithValue("@AvailableSeats", totalSeats); 
-                cmd.Parameters.AddWithValue("@TicketPrice", ticketPrice);
-                cmd.Parameters.AddWithValue("@EventType", eventType);
+                
 
-                conn.Open();
-                int eventID = Convert.ToInt32(cmd.ExecuteScalar());
-
-                eventObj = new Event()
+                using (SqlConnection conn = GetDBConn.GetConnection())
                 {
-                    EventID = eventID,
-                    EventName = eventName,
-                    EventDate = date,
-                    EventTime = time,
-                    Venue = venue,
-                    TotalSeats = totalSeats,
-                    AvailableSeats = totalSeats,
-                    TicketPrice = ticketPrice,
-                    Type = (Event.EventType)Enum.Parse(typeof(Event.EventType), eventType)
-                };
+                    string query = @"
+            INSERT INTO Event (EventName, EventDate, EventTime, VenueID, TotalSeats, AvailableSeats, TicketPrice, EventType) 
+            VALUES (@EventName, @EventDate, @EventTime, @VenueID, @TotalSeats, @AvailableSeats, @TicketPrice, @EventType);
+            SELECT SCOPE_IDENTITY();";
 
-                Console.WriteLine("Event Created Successfully with ID: " + eventID);
-            }
-
-            return eventObj;
-        }
-
-        
-        public Event GetEventDetails(int eventID)
-        {
-            Event eventObj = null;
-
-            using (SqlConnection conn = GetDBConn.GetConnection())
-            {
-                string query = "SELECT * FROM Event WHERE EventID = @EventID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@EventID", eventID);
-
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    if (reader.Read())
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
-                        eventObj = new Event()
+                        // Add parameters using AddWithValue
+                        cmd.Parameters.AddWithValue("@EventName", eventObj2.EventName);
+                        cmd.Parameters.AddWithValue("@EventDate", eventObj2.EventDate);
+                        cmd.Parameters.AddWithValue("@EventTime", eventObj2.EventTime);
+                        cmd.Parameters.AddWithValue("@VenueID", eventObj2.Venue.VenueID);
+                        cmd.Parameters.AddWithValue("@TotalSeats", eventObj2.TotalSeats);
+                        cmd.Parameters.AddWithValue("@AvailableSeats", eventObj2.TotalSeats); // Initially available
+                        cmd.Parameters.AddWithValue("@TicketPrice", eventObj2.TicketPrice);
+                        cmd.Parameters.AddWithValue("@EventType", eventObj2.Type.ToString());
+
+                        
+                        int eventID = Convert.ToInt32(cmd.ExecuteScalar());
+
+                        eventObj = new Event
                         {
-                            EventID = Convert.ToInt32(reader["EventID"]),
-                            EventName = reader["EventName"].ToString(),
-                            EventDate = Convert.ToDateTime(reader["EventDate"]),
-                            EventTime = TimeSpan.Parse(reader["EventTime"].ToString()),
-                            TotalSeats = Convert.ToInt32(reader["TotalSeats"]),
-                            AvailableSeats = Convert.ToInt32(reader["AvailableSeats"]),
-                            TicketPrice = Convert.ToDecimal(reader["TicketPrice"]),
-                            Type = (Event.EventType)Enum.Parse(typeof(Event.EventType), reader["EventType"].ToString())
+                            EventID = eventID,
+                            EventName = eventObj2.EventName,
+                            EventDate = eventObj2.EventDate,
+                            EventTime = eventObj2.EventTime,
+                            Venue = eventObj2.Venue,
+                            TotalSeats = eventObj2.TotalSeats,
+                            AvailableSeats = eventObj2.TotalSeats,
+                            TicketPrice = eventObj2.TicketPrice,
+                            Type = eventObj2.Type
                         };
+
+                        Console.WriteLine("Event Created Successfully with ID: " + eventID);
                     }
                 }
             }
-
+            catch (SqlException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch (ArgumentException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch (NullPointerException ex)
+            {
+                //customer exception catching
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch (System.Exception ex)
+            {
+                //if we get any unexpected
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+                
+            }
             return eventObj;
         }
+
+
+
+        public Event GetEventDetails(int eventID)
+        {
+            Event eventObj = null;
+            try
+            {
+                if (eventID <= 0)
+                    throw new InvalidBookingIDException(eventID);
+
+                
+
+                using (SqlConnection conn = GetDBConn.GetConnection())
+                {
+                    string query = "SELECT * FROM Event WHERE EventID = @EventID";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@EventID", eventID);
+
+                    
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            eventObj = new Event()
+                            {
+                                EventID = Convert.ToInt32(reader["EventID"]),
+                                EventName = reader["EventName"].ToString(),
+                                EventDate = Convert.ToDateTime(reader["EventDate"]),
+                                EventTime = TimeSpan.Parse(reader["EventTime"].ToString()),
+                                TotalSeats = Convert.ToInt32(reader["TotalSeats"]),
+                                AvailableSeats = Convert.ToInt32(reader["AvailableSeats"]),
+                                TicketPrice = Convert.ToDecimal(reader["TicketPrice"]),
+                                Type = (Event.EventType)Enum.Parse(typeof(Event.EventType), reader["EventType"].ToString())
+                            };
+                        }
+                        else
+                        {
+                            throw new EventNotFoundException(eventID);
+                        }
+                    }
+                }
+
+            }
+            catch (InvalidBookingIDException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+
+            catch (EventNotFoundException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }catch(System.Exception ex)
+            {
+                //unexpected error
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            
+            return eventObj;
+        }
+
+
 
         public IEnumerable<Event> GetEventDetailByEventType(EventType eventType)
         {
@@ -124,18 +203,36 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                                 Type = (Event.EventType)Enum.Parse(typeof(Event.EventType), reader["EventType"].ToString())
                             };
 
-                            eventList.Add(eventObj);
+                            if(eventObj == null)
+                            {
+                                throw new EventNotFoundException(eventObj.EventID);
+                            }
+                            else
+                            {
+                                eventList.Add(eventObj);
+                            }
                         }
                     }
                 }
             }
-            catch (SqlException sqlEx)
+            catch (SqlException ex)
             {
-                throw new System.Exception("An error occurred while retrieving events by type: " + sqlEx.Message);
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch(EventNotFoundException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
             catch (System.Exception ex)
             {
-                throw new System.Exception("An unexpected error occurred: " + ex.Message);
+                //for any unexpected errors
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
 
             return eventList;
@@ -143,41 +240,80 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 
         public void BookTickets(int eventID, int numTickets)
         {
-            using (SqlConnection conn = GetDBConn.GetConnection())
+            try
             {
-                string query = @"UPDATE Event SET AvailableSeats = AvailableSeats - @NumTickets WHERE EventID = @EventID AND AvailableSeats >= @NumTickets";
+                if (eventID <= 0)
+                    throw new InvalidBookingIDException(eventID);
+                if (numTickets <= 0)
+                    throw new ArgumentException("Number of tickets must be greater than zero.");
 
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NumTickets", numTickets);
-                cmd.Parameters.AddWithValue("@EventID", eventID);
-
-                
-                int rowsAffected = cmd.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
+                using (SqlConnection conn = GetDBConn.GetConnection())
                 {
-                    ConsoleColorHelper.SetSuccessColor();
-                    Console.WriteLine($"\n{numTickets} tickets booked successfully.\n");
-                    ConsoleColorHelper.ResetColor();
+                    string query = @"UPDATE Event SET AvailableSeats = AvailableSeats - @NumTickets WHERE EventID = @EventID AND AvailableSeats >= @NumTickets";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@NumTickets", numTickets);
+                    cmd.Parameters.AddWithValue("@EventID", eventID);
+
+                    
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        ConsoleColorHelper.SetSuccessColor();
+                        Console.WriteLine($"\n{numTickets} tickets booked successfully.\n");
+                        ConsoleColorHelper.ResetColor();
+                    }
+                    else
+                    {
+                        throw new System.Exception("Not enough tickets available.");
+                    }
                 }
-                else
-                {
-                    throw new System.Exception("Not enough tickets available.");
-                }
+            }
+            catch(InvalidBookingIDException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch(ArgumentException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
+            catch (System.Exception ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
         }
 
 
         public void CancelTickets(int eventID, int numTickets)
         {
-            using (SqlConnection conn = GetDBConn.GetConnection())
+            try
             {
-                
-                string query = "UPDATE Event SET AvailableSeats = AvailableSeats + @NumTickets WHERE EventID = @EventID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@NumTickets", numTickets);
-                cmd.Parameters.AddWithValue("@EventID", eventID);
-                cmd.ExecuteNonQuery();
+                if (eventID <= 0)
+                    throw new InvalidBookingIDException(eventID);
+                if (numTickets <= 0)
+                    throw new ArgumentException("Number of tickets must be greater than zero.");
+
+                using (SqlConnection conn = GetDBConn.GetConnection())
+                {
+                    string query = "UPDATE Event SET AvailableSeats = AvailableSeats + @NumTickets WHERE EventID = @EventID";
+                    SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@NumTickets", numTickets);
+                    cmd.Parameters.AddWithValue("@EventID", eventID);
+
+                    
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                throw new System.Exception("An error occurred while canceling tickets: " + ex.Message);
             }
         }
 

@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace TicketBookingSystem.Exception
 {
-    internal class NullPointerException
+    public class NullPointerException : System.Exception
     {
+        public NullPointerException()
+            : base("Null reference encountered.")
+        {
+        }
     }
+
 }
