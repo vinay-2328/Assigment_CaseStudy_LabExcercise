@@ -8,39 +8,56 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {
+
+        //Getting customer by Id
         public Customer GetCustomerById(int customerId)
         {
             Customer customer = null;
-            using (SqlConnection conn = GetDBConn.GetConnection())
-            {
-                string query = "select * from Customer where CustomerID = @CustomerID";
-                SqlCommand command = new SqlCommand(query, conn);
-                command.Parameters.AddWithValue("@CustomerID", customerId);
 
-                using (SqlDataReader reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+            try{
+                using (SqlConnection conn = GetDBConn.GetConnection())
                     {
-                        customer = new Customer()
-                        {
-                            CustomerID = Convert.ToInt32(reader["CustomerID"]),
-                            CustomerName = Convert.ToString(reader["CustomerName"]),
-                            Email = Convert.ToString(reader["Email"]),
-                            PhoneNumber = Convert.ToString(reader["PhoneNumber"]),
-                            BookingID = reader["BookingID"] != DBNull.Value ? (int?)Convert.ToInt32(reader["BookingID"]) : null
-                        };
-                    }
+                        string query = "select * from Customer where CustomerID = @CustomerID";
+                        SqlCommand command = new SqlCommand(query, conn);
+                        command.Parameters.AddWithValue("@CustomerID", customerId);
 
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                customer = new Customer()
+                                {
+                                    CustomerID = Convert.ToInt32(reader["CustomerID"]),
+                                    CustomerName = Convert.ToString(reader["CustomerName"]),
+                                    Email = Convert.ToString(reader["Email"]),
+                                    PhoneNumber = Convert.ToString(reader["PhoneNumber"]),
+                                    BookingID = reader["BookingID"] != DBNull.Value ? (int?)Convert.ToInt32(reader["BookingID"]) : null
+                                };
+                            }
+
+                            if(customer != null)
+                            {
+                            throw new System.Exception($"Customer not Found for id: {customerId}");
+                            }
+
+                        }
+                    }
+                }catch(System.Exception e)
+                {
+                    Console.WriteLine(e.Message);
                 }
-            }
             return customer;
         }
+
+        //Displaying Customer in Console
         public void DisplayCustomerDetails(Customer customer)
         {
             Console.WriteLine("========== Displaying Customer Details ==========");
             Console.WriteLine($"Customer Name: {customer.CustomerName}\nCustomer Email: {customer.Email}\nCustomer Phone-No: {customer.PhoneNumber}");
         }
 
+
+        // Checking for  login validation 
         public Customer CheckUser(string email, string password)
         {
             Customer customer = null;
@@ -112,6 +129,8 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             return customer;
         }
 
+
+        // Adding new customer in database
         public Customer AddCustomer(Customer customerReg)
         {
             Customer newCustomer = null;

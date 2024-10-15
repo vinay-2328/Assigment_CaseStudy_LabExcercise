@@ -11,7 +11,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
 {
     public class EventRepository : IEventRepository
     {
-
+        //Creating Events
         public Event CreateEvent(Event eventObj2)
         {
 
@@ -98,7 +98,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
         }
 
 
-
+        //getting single Event details
         public Event GetEventDetails(int eventID)
         {
             Event eventObj = null;
@@ -165,7 +165,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
         }
 
 
-
+        //Getting list of Event of same Event Type 
         public IEnumerable<Event> GetEventDetailByEventType(EventType eventType)
         {
             List<Event> eventList = new List<Event>();
@@ -238,6 +238,8 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             return eventList;
         }
 
+
+        //Booking Tickets
         public void BookTickets(int eventID, int numTickets)
         {
             try
@@ -291,6 +293,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
         }
 
 
+        //cancel tickets
         public void CancelTickets(int eventID, int numTickets)
         {
             try
@@ -311,12 +314,29 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                     cmd.ExecuteNonQuery();
                 }
             }
+            
+            catch (InvalidBookingIDException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }catch(ArgumentException ex)
+            {
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
+            }
             catch (System.Exception ex)
             {
-                throw new System.Exception("An error occurred while canceling tickets: " + ex.Message);
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
+
         }
 
+
+        //getting list of all the Events
         public IEnumerable<Event> GetAllEvents()
         {
             List<Event> events = new List<Event>();
@@ -371,6 +391,8 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             return events;
         }
 
+
+        //calculating total price of given number of tickets
         public decimal GetTotalPrice(int eventId,int numOfTickets)
         {
             decimal totalPrice = 0;

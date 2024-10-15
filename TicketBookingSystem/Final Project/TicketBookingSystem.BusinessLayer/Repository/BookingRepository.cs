@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using TicketBookingSystem.Entity;
+using TicketBookingSystem.Exception;
 using TicketBookingSystem.Util;
 
 namespace TicketBookingSystem.BusinessLayer.Repository
@@ -18,28 +19,35 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             customerRepository = new CustomerRepository();
         }
 
+        //creating booking
         public void CreateBooking(Event eventDetails, Customer[] customers, int numTickets)
         {
-            
-            if (eventDetails.AvailableSeats < numTickets)
+           try{ 
+                if (eventDetails.AvailableSeats < numTickets)
+                {
+                    throw new System.Exception("Not enough available tickets for the selected event.");
+                }
+
+                var booking = new Booking
+                {
+                    Event = eventDetails,
+                    Customers = customers,
+                    NumTickets = numTickets,
+                    TotalCost = eventDetails.TicketPrice * numTickets,
+                    BookingDate = DateTime.Now 
+                };
+
+                eventRepository.BookTickets(eventDetails.EventID, numTickets );
+                SaveBookingToDatabase(booking);
+                DisplayBookingDetails(booking);
+            }catch(System.Exception e)
             {
-                throw new System.Exception("Not enough available tickets for the selected event.");
+                Console.WriteLine(e.Message);
             }
-
-            var booking = new Booking
-            {
-                Event = eventDetails,
-                Customers = customers,
-                NumTickets = numTickets,
-                TotalCost = eventDetails.TicketPrice * numTickets,
-                BookingDate = DateTime.Now 
-            };
-
-            eventRepository.BookTickets(eventDetails.EventID, numTickets );
-            SaveBookingToDatabase(booking);
-            DisplayBookingDetails(booking);
         }
 
+
+        //saving booking in database
         private void SaveBookingToDatabase(Booking booking)
         {
             try
@@ -117,6 +125,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             }
         }
 
+        //Get booking by ID
         public Booking GetBookingByID(int bookingID)
         {
             Booking booking = null;
@@ -161,41 +170,50 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             }
             return booking;
         }
+
+        //Cancel booking method
         public void CancelBooking(int numTickets, Booking booking)
         {
-            if (numTickets > booking.NumTickets)
-            {
-                throw new System.Exception("Cannot cancel more tickets than booked.");
-            }
-
-            
-            if (numTickets == booking.NumTickets)
-            {
-                DeleteBookingFromDatabase(booking);
-                Console.WriteLine($"Booking with ID {booking.BookingId} has been canceled and deleted from the system.");
-            }
-            else
-            {
-                
-                eventRepository.CancelTickets(booking.Event.EventID, numTickets);
-
-                
-                booking.NumTickets -= numTickets;
-
-                booking.TotalCost = eventRepository.GetTotalPrice(booking.Event.EventID,(booking.NumTickets));
-
-                
-                if (booking.TotalCost <= 0)
+            try{
+                if (numTickets > booking.NumTickets)
                 {
-                    throw new System.Exception("Total cost cannot be zero or negative after cancellation.");
+                    throw new System.Exception("Cannot cancel more tickets than booked.");
                 }
 
-                
-                UpdateBookingInDatabase(booking);
-                Console.WriteLine($"Booking updated. Remaining Tickets: {booking.NumTickets}, Total Cost: {booking.TotalCost}");
+
+                    if (numTickets == booking.NumTickets)
+                    {
+                        DeleteBookingFromDatabase(booking);
+                        Console.WriteLine($"Booking with ID {booking.BookingId} has been canceled and deleted from the system.");
+                    }
+                    else
+                    {
+
+                        eventRepository.CancelTickets(booking.Event.EventID, numTickets);
+
+
+                        booking.NumTickets -= numTickets;
+
+                        booking.TotalCost = eventRepository.GetTotalPrice(booking.Event.EventID, (booking.NumTickets));
+
+
+                        if (booking.TotalCost <= 0)
+                        {
+                            throw new System.Exception("Total cost cannot be zero or negative after cancellation.");
+                        }
+
+
+                        UpdateBookingInDatabase(booking);
+                        Console.WriteLine($"Booking updated. Remaining Tickets: {booking.NumTickets}, Total Cost: {booking.TotalCost}");
+                }
+            }catch(System.Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 
+        
+        //deleting booking from Database
         private void DeleteBookingFromDatabase(Booking booking)
         {
             try
@@ -216,6 +234,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
         }
 
 
+        //Updating Booking in Database
         private void UpdateBookingInDatabase(Booking booking)
         {
             try
@@ -237,7 +256,7 @@ namespace TicketBookingSystem.BusinessLayer.Repository
         }
 
         
-
+        //Displaying booking details
         public void DisplayBookingDetails(Booking booking)
         {
 
@@ -251,6 +270,8 @@ namespace TicketBookingSystem.BusinessLayer.Repository
             ConsoleColorHelper.ResetColor();
         }
 
+
+        //Get all the booking for Customer
         public IEnumerable<Booking> GetAllBooking(int customerID)
         {
             List<Booking> bookings = new List<Booking>();
@@ -285,8 +306,11 @@ namespace TicketBookingSystem.BusinessLayer.Repository
                                 TotalCost = Convert.ToDecimal(reader["TotalCost"]),
                                 BookingDate = Convert.ToDateTime(reader["BookingDate"]),
                             };
-
-                            bookings.Add(booking);
+                            if(booking != null)
+                            {
+                                bookings.Add( booking );
+                            }
+                            
                         }
                     }
                 }
