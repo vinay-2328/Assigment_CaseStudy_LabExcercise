@@ -8,7 +8,7 @@ namespace PayXpert.BusinessLayer.Services
 {
     public class TaxService : ITaxService
     {
-        TaxRepository taxRepository;
+        readonly ITaxRepository taxRepository;
         public TaxService() 
         { 
             taxRepository = new TaxRepository();

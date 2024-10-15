@@ -12,6 +12,8 @@ namespace PayXpert.BusinessLayer.Repository
 {
     internal class TaxRepository : ITaxRepository
     {
+
+        //Calculating tax of Employee with employee id and tax year
         public decimal CalculateTax(int employeeId, int taxYear)
         {
             decimal tax = 0;
@@ -38,6 +40,9 @@ namespace PayXpert.BusinessLayer.Repository
             }
             return tax;
         }
+
+
+        //getting tax from database by taxID
         public Tax GetTaxById(int taxId)
         {
             Tax tax = null;
@@ -70,6 +75,9 @@ namespace PayXpert.BusinessLayer.Repository
             return tax;
 
         }
+
+
+        //getting list of taxs from database of single employee using employee ID
         public IEnumerable<Tax> GetTaxesForEmployee(int employeeId)
         {
             List<Tax> taxes = new List<Tax>();
@@ -97,6 +105,9 @@ namespace PayXpert.BusinessLayer.Repository
 
             return taxes;
         }
+
+
+        //Getting list of taxs from database of single year using tax year
         public IEnumerable<Tax> GetTaxesForYear(int taxYear)
         {
             List<Tax> taxes = new List<Tax>();

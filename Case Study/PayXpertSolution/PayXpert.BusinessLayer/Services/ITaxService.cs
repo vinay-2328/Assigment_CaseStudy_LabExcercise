@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PayXpert.BusinessLayer.Services
 {
-    internal interface ITaxService
+    public interface ITaxService
     {
         decimal CalculateTax(int employeeId, int taxYear);
         Tax GetTaxById(int taxId);

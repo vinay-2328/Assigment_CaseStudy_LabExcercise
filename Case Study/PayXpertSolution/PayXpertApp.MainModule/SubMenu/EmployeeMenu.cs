@@ -12,7 +12,7 @@ namespace PayXpertApp.MainModule.SubMenu
 {
     internal class EmployeeMenu
     {
-        private static readonly EmployeeService _employeeService = new EmployeeService();
+        private static readonly IEmployeeService _employeeService = new EmployeeService();
         internal static void Menu()
         {
            while(true)
@@ -142,12 +142,14 @@ namespace PayXpertApp.MainModule.SubMenu
 
             try
             {
-                _employeeService.AddEmployee(newEmployee);
-                ConsoleColorHelper.SetSuccessColor();
-                Console.WriteLine("\nEmployee Added Successfully!");
-                Console.WriteLine("Press enter to Continue...");
-                Console.ReadKey();
-                ConsoleColorHelper.ResetColor();
+                if(_employeeService.AddEmployee(newEmployee)) 
+                {
+                    ConsoleColorHelper.SetSuccessColor();
+                    Console.WriteLine("\nEmployee Added Successfully!");
+                    Console.WriteLine("Press enter to Continue...");
+                    Console.ReadKey();
+                    ConsoleColorHelper.ResetColor();
+                }
             }
             catch (Exception ex)
             {
@@ -281,11 +283,15 @@ namespace PayXpertApp.MainModule.SubMenu
 
             try
             {
-                _employeeService.UpdateEmployee(udaptedEmployee, employeeID);
-                ConsoleColorHelper.SetSuccessColor();
-                Console.WriteLine($"Employee {udaptedEmployee.FirstName} {udaptedEmployee.LastName} is updated Successfully!");
-                ConsoleColorHelper.ResetColor();
-            }catch(InvalidInputException ex)
+                if(_employeeService.UpdateEmployee(udaptedEmployee, employeeID))
+                {
+                    ConsoleColorHelper.SetSuccessColor();
+                    Console.WriteLine($"Employee {udaptedEmployee.FirstName} {udaptedEmployee.LastName} is updated Successfully!");
+                    ConsoleColorHelper.ResetColor();
+                }
+
+            }
+            catch(InvalidInputException ex)
             {
                 ConsoleColorHelper.SetErrorColor();
                 Console.WriteLine(ex.Message);
@@ -319,8 +325,13 @@ namespace PayXpertApp.MainModule.SubMenu
 
             Console.Write("\nSelect Employee you want to delete, Enter the Employee Id: ");
             int employeeID = Convert.ToInt32(Console.ReadLine());
-            
-            _employeeService.RemoveEmployee(employeeID);
+
+            if (_employeeService.RemoveEmployee(employeeID))
+            {
+                ConsoleColorHelper.SetSuccessColor();
+                Console.WriteLine($"Record for Employee having employeeid {employeeID} Deleted Successfully!");
+                ConsoleColorHelper.ResetColor();
+            }
             
             
             Console.WriteLine("press Enter to go back...");

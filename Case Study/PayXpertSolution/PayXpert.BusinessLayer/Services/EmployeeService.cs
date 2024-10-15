@@ -8,7 +8,13 @@ namespace PayXpert.BusinessLayer.Services
 {
     public class EmployeeService : IEmployeeService
     {
-        EmployeeRepository employeeRepository = new EmployeeRepository();
+        readonly IEmployeeRepository employeeRepository;
+
+        public EmployeeService()
+        {
+            employeeRepository = new EmployeeRepository();
+        }
+
 
         public Employee GetEmployeeById(int employeeId)
         { 
@@ -20,17 +26,17 @@ namespace PayXpert.BusinessLayer.Services
             return employeeRepository.GetAllEmployees();
         }
 
-        public void AddEmployee(Employee employee)
+        public bool AddEmployee(Employee employee)
         {
-            employeeRepository.AddEmployee(employee);
+            return employeeRepository.AddEmployee(employee);
         }
-        public void RemoveEmployee(int employeeId)
+        public bool RemoveEmployee(int employeeId)
         { 
-            employeeRepository.RemoveEmployee(employeeId);
+            return employeeRepository.RemoveEmployee(employeeId);
         }
-        public void UpdateEmployee(Employee employee, int employeeID)
+        public bool UpdateEmployee(Employee employee, int employeeID)
         {
-            employeeRepository.UpdateEmployee(employee,employeeID);
+            return employeeRepository.UpdateEmployee(employee, employeeID);
         }
     }
 

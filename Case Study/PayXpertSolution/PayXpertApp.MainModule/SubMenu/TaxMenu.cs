@@ -12,7 +12,7 @@ namespace PayXpertApp.MainModule.SubMenu
     internal class TaxMenu
     {
 
-        private static readonly  TaxService _taxService = new TaxService();
+        private static readonly  ITaxService _taxService = new TaxService();
         internal static void Menu()
         {
             while (true)

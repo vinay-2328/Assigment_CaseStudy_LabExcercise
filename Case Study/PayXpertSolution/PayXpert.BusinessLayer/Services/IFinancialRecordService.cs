@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PayXpert.BusinessLayer.Services
 {
-    internal interface IFinancialRecordService
+    public interface IFinancialRecordService
     {
-        void AddFinancialRecord(FinancialRecord financialRecord);
+        bool AddFinancialRecord(FinancialRecord financialRecord);
         FinancialRecord GetFinancialRecordById(int recordId);
         IEnumerable<FinancialRecord> GetFinancialRecordsForEmployee(int employeeId);
         IEnumerable<FinancialRecord> GetFinancialRecordForDate(DateTime recordDate);

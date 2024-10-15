@@ -11,8 +11,8 @@ namespace PayXpert.BusinessLayer.Repository
     {
         Employee GetEmployeeById(int employeeId);
         IEnumerable<Employee> GetAllEmployees();
-        void AddEmployee(Employee employee);
-        void RemoveEmployee(int employeeId);
-        void UpdateEmployee(Employee employee, int employeeID);
+        bool AddEmployee(Employee employee);
+        bool RemoveEmployee(int employeeId);
+        bool UpdateEmployee(Employee employee, int employeeID);
     }
 }

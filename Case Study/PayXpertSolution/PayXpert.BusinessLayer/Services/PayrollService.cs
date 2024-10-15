@@ -10,7 +10,7 @@ namespace PayXpert.BusinessLayer.Services
 {
     public class PayrollService : IPayrollService
     {
-        PayrollRepository payrollRepository;
+        readonly IPayrollRepository payrollRepository;
         public PayrollService() 
         {
             payrollRepository = new PayrollRepository();
@@ -23,9 +23,9 @@ namespace PayXpert.BusinessLayer.Services
         {
             return payrollRepository.GetPayrollsForEmployee(employeeId);
         }
-        public void GeneratePayroll(Payroll payroll)
+        public bool GeneratePayroll(Payroll payroll)
         {
-            payrollRepository.GeneratePayroll(payroll);
+            return  payrollRepository.GeneratePayroll(payroll);
         }
         public IEnumerable<Payroll> GetPayrollsForPeriod(DateTime startDate, DateTime endDate)
         {

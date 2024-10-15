@@ -10,32 +10,48 @@ namespace PayXpert.BusinessLayer.Repository
 {
     internal class FinancialRecordRepository : IFinancialRecordRepository
     {
-        public void AddFinancialRecord(FinancialRecord financialRecord)
+
+        //Adding  new financial record in database
+        public bool AddFinancialRecord(FinancialRecord financialRecord)
         {
-            using (SqlConnection connection = DBConnUtil.GetConnection())
+            bool result = false;
+
+            try{
+                using (SqlConnection connection = DBConnUtil.GetConnection())
+                {
+                    string query = "insert into FinancialRecord (EmployeeID, RecordDate, Description, Amount, RecordType) " +
+                                   "values (@EmployeeID, @RecordDate, @Description, @Amount, @RecordType)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@EmployeeID", financialRecord.EmployeeID);
+                    command.Parameters.AddWithValue("@RecordDate", financialRecord.RecordDate);
+                    command.Parameters.AddWithValue("@Description", financialRecord.Description);
+                    command.Parameters.AddWithValue("@Amount", financialRecord.Amount);
+                    command.Parameters.AddWithValue("@RecordType", financialRecord.RecordType);
+
+                    int rowAffected = command.ExecuteNonQuery();
+
+                    if (rowAffected == 0)
+                    {
+                        throw new FinancialRecordException("Error while adding financial record.");
+                    }
+                    else
+                    {
+                        result = true;
+                    }
+
+                }
+            }catch(FinancialRecordException ex)
             {
-                string query = "insert into FinancialRecord (EmployeeID, RecordDate, Description, Amount, RecordType) " +
-                               "values (@EmployeeID, @RecordDate, @Description, @Amount, @RecordType)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@EmployeeID", financialRecord.EmployeeID);
-                command.Parameters.AddWithValue("@RecordDate", financialRecord.RecordDate);
-                command.Parameters.AddWithValue("@Description", financialRecord.Description);
-                command.Parameters.AddWithValue("@Amount", financialRecord.Amount);
-                command.Parameters.AddWithValue("@RecordType", financialRecord.RecordType);
-
-                int rowAffected = command.ExecuteNonQuery();
-
-                if (rowAffected == 0)
-                {
-                    throw new FinancialRecordException("Error while adding financial record.");
-                }
-                else
-                {
-                    Console.WriteLine($"{rowAffected} records added successfully!");
-                }
-
+                ConsoleColorHelper.SetErrorColor();
+                Console.WriteLine(ex.Message);
+                ConsoleColorHelper.ResetColor();
             }
+
+            return result;
         }
+
+
+        //getting Financial record from database using record ID
         public FinancialRecord GetFinancialRecordById(int recordId)
         {
             FinancialRecord record = null;
@@ -68,6 +84,8 @@ namespace PayXpert.BusinessLayer.Repository
             return record;
         }
 
+
+        //Getting financial records for Employee ID
         public IEnumerable<FinancialRecord> GetFinancialRecordsForEmployee(int employeeId)
         {
             List<FinancialRecord> records = new List<FinancialRecord>();
@@ -99,6 +117,9 @@ namespace PayXpert.BusinessLayer.Repository
             }
             return records;
         }
+
+
+        //getting list of all financial  records based on given date
         public IEnumerable<FinancialRecord> GetFinancialRecordForDate(DateTime recordDate)
         {
             List<FinancialRecord> records = new List<FinancialRecord>();

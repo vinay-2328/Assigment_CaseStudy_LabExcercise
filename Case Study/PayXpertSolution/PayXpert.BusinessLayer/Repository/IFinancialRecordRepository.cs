@@ -9,7 +9,7 @@ namespace PayXpert.BusinessLayer.Repository
 {
     internal interface IFinancialRecordRepository
     {
-        void AddFinancialRecord(FinancialRecord financialRecord);
+        bool AddFinancialRecord(FinancialRecord financialRecord);
         FinancialRecord GetFinancialRecordById(int recordId);
         IEnumerable<FinancialRecord> GetFinancialRecordsForEmployee(int employeeId);
         IEnumerable<FinancialRecord> GetFinancialRecordForDate(DateTime recordDate);

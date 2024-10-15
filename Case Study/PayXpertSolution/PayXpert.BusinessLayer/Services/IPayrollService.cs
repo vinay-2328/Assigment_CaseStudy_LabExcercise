@@ -10,7 +10,7 @@ namespace PayXpert.BusinessLayer.Services
     {
         Payroll GetPayrollById(int payrollId);
         IEnumerable<Payroll> GetPayrollsForEmployee(int employeeId);
-        void GeneratePayroll(Payroll payroll);
+        bool GeneratePayroll(Payroll payroll);
         IEnumerable<Payroll> GetPayrollsForPeriod(DateTime startDate, DateTime endDate);
     }
 }

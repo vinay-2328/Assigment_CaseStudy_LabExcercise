@@ -10,14 +10,14 @@ namespace PayXpert.BusinessLayer.Services
 {
     public class FinancialRecordService : IFinancialRecordService
     {
-        FinancialRecordRepository repository;
+        readonly IFinancialRecordRepository repository;
         public FinancialRecordService()
         {
             repository = new FinancialRecordRepository();
         }
-        public void AddFinancialRecord(FinancialRecord financialRecord)
+        public bool AddFinancialRecord(FinancialRecord financialRecord)
         {
-            repository.AddFinancialRecord(financialRecord);
+            return repository.AddFinancialRecord(financialRecord);
         }
         public FinancialRecord GetFinancialRecordById(int recordId)
         {

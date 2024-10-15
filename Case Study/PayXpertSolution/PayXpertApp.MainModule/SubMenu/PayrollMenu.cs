@@ -96,10 +96,12 @@ namespace PayXpertApp.MainModule.SubMenu
 
             try
             {
-                _payrollService.GeneratePayroll(payroll);
-                ConsoleColorHelper.SetSuccessColor();
-                Console.WriteLine($"Payroll generated successfully for Employee ID: {payroll.EmployeeID}.");
-                ConsoleColorHelper.ResetColor();
+                if(_payrollService.GeneratePayroll(payroll))
+                {
+                    ConsoleColorHelper.SetSuccessColor();
+                    Console.WriteLine($"Payroll generated successfully for Employee ID: {payroll.EmployeeID}.");
+                    ConsoleColorHelper.ResetColor();
+                }
             }
             catch (PayrollGenerationException ex)
             {

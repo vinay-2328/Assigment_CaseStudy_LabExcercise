@@ -10,7 +10,7 @@ namespace PayXpertApp.MainModule.SubMenu
 {
     internal class FinancialMenu
     {
-        private static readonly FinancialRecordService _financialRecordService = new FinancialRecordService();
+        private static readonly IFinancialRecordService _financialRecordService = new FinancialRecordService();
 
         internal static void Menu()
         {
@@ -89,11 +89,12 @@ namespace PayXpertApp.MainModule.SubMenu
                 Console.Write("Enter Record Type (Income/Expense): ");
                 record.RecordType = Console.ReadLine();
 
-                _financialRecordService.AddFinancialRecord(record);
-
-                ConsoleColorHelper.SetSuccessColor();
-                Console.WriteLine("Financial record added successfully!");
-                ConsoleColorHelper.ResetColor();
+                if(_financialRecordService.AddFinancialRecord(record))
+                {
+                    ConsoleColorHelper.SetSuccessColor();
+                    Console.WriteLine("Financial record added successfully!");
+                    ConsoleColorHelper.ResetColor();
+                }
             }
             catch (Exception ex)
             {
