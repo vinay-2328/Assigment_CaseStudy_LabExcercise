@@ -15,6 +15,13 @@ namespace PayXpert.BusinessLayer.Services
         {
             payrollRepository = new PayrollRepository();
         }
+
+        //For Testing purpose
+        public PayrollService(IPayrollRepository payrollRepository)
+        {
+            this.payrollRepository = payrollRepository;
+        }
+
         public Payroll GetPayrollById(int payrollId)
         {
             return payrollRepository.GetPayrollById(payrollId);

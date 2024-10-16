@@ -13,6 +13,12 @@ namespace PayXpert.BusinessLayer.Services
         { 
             taxRepository = new TaxRepository();
         }
+
+        //for testing purpose
+        public TaxService(ITaxRepository taxRepository)
+        {
+            this.taxRepository = taxRepository;
+        }
         public decimal CalculateTax(int employeeId, int taxYear)
         {
             return taxRepository.CalculateTax(employeeId,taxYear);

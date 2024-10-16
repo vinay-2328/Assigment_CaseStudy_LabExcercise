@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PayXpert.BusinessLayer.Repository
 {
-    internal interface IFinancialRecordRepository
+    public interface IFinancialRecordRepository
     {
         bool AddFinancialRecord(FinancialRecord financialRecord);
         FinancialRecord GetFinancialRecordById(int recordId);

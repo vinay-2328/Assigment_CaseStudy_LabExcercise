@@ -15,6 +15,13 @@ namespace PayXpert.BusinessLayer.Services
         {
             repository = new FinancialRecordRepository();
         }
+
+        //For testing Purpose
+        public FinancialRecordService(IFinancialRecordRepository repository)
+        {
+            this.repository = repository;
+        }   
+
         public bool AddFinancialRecord(FinancialRecord financialRecord)
         {
             return repository.AddFinancialRecord(financialRecord);

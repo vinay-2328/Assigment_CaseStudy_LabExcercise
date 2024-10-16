@@ -15,6 +15,11 @@ namespace PayXpert.BusinessLayer.Services
             employeeRepository = new EmployeeRepository();
         }
 
+        //For testing purpose
+        public EmployeeService(IEmployeeRepository employeeRepository)
+        {
+            this.employeeRepository = employeeRepository;
+        }
 
         public Employee GetEmployeeById(int employeeId)
         { 

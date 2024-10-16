@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PayXpert.BusinessLayer.Repository
 {
-    internal interface IEmployeeRepository
+    public interface IEmployeeRepository
     {
         Employee GetEmployeeById(int employeeId);
         IEnumerable<Employee> GetAllEmployees();
